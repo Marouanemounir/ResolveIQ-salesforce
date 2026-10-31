@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ResolveIQ_Resolution_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISPICKVAL(Status, &quot;Closed&quot;),ISBLANK(Resolution_Summary__c))</errorConditionFormula>
+    <errorMessage>Renseignez la résolution avant de fermer le ticket.</errorMessage>
+</ValidationRule>
