@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types><members>ResolveIQController</members><members>ResolveIQControllerTest</members><members>ResolveIQLookupAction</members><members>ResolveIQCreateAction</members><members>ResolveIQActionsTest</members><name>ApexClass</name></types>
+    <types><members>Contact.Preferred_Language__c</members><members>Case.Category__c</members><members>Case.Resolution_Summary__c</members><members>Case.AI_Summary__c</members><name>CustomField</name></types>
+    <types><members>Contact.ResolveIQ_Email_Required</members><members>Case.ResolveIQ_Required_Fields</members><members>Case.ResolveIQ_Resolution_Required</members><name>ValidationRule</name></types>
+    <types><members>Contact-ResolveIQ Contact</members><members>Case-ResolveIQ Case</members><name>Layout</name></types>
+    <types><members>ResolveIQ_Developer</members><name>PermissionSet</name></types>
+    <types><members>resolveIQConsole</members><name>LightningComponentBundle</name></types>
+    <types><members>ResolveIQ</members><name>CustomTab</name></types>
+    <types><members>ResolveIQ</members><name>CustomApplication</name></types>
+    <version>68.0</version>
+</Package>

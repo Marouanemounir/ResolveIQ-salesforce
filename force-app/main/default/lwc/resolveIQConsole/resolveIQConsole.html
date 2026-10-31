@@ -1,0 +1,24 @@
+<template>
+ <lightning-card title="ResolveIQ — Assistance client" icon-name="standard:case">
+  <div class="slds-p-around_medium">
+   <template lwc:if={busy}><lightning-spinner alternative-text="Chargement" size="small"></lightning-spinner></template>
+   <p role="alert" class="slds-text-color_error">{error}</p><p role="status">{message}</p>
+   <lightning-input name="email" type="email" label="Email du client" value={email} onchange={change} required></lightning-input>
+   <lightning-button label="Rechercher" onclick={search} disabled={busy}></lightning-button>
+   <lightning-combobox label="Client" value={contactId} options={options} onchange={selectContact} disabled={busy}></lightning-combobox>
+   <template lwc:if={hasContact}>
+    <h2 class="slds-text-heading_small slds-m-top_large">Tickets du client</h2>
+    <lightning-datatable key-field="Id" data={cases} columns={columns} hide-checkbox-column onrowaction={selectCase}></lightning-datatable>
+    <h2 class="slds-text-heading_small slds-m-top_large">Nouvelle demande</h2>
+    <lightning-input name="subject" label="Objet" value={subject} onchange={change} maxlength="255" required></lightning-input>
+    <lightning-textarea name="description" label="Description" value={description} onchange={change} required></lightning-textarea>
+    <lightning-combobox name="category" label="Catégorie" value={category} options={categories} onchange={change}></lightning-combobox>
+    <lightning-button variant="brand" label="Créer le ticket" onclick={create} disabled={busy}></lightning-button>
+   </template>
+   <template lwc:if={hasCase}>
+    <lightning-textarea name="resolution" label="Résumé de résolution" value={resolution} onchange={change} maxlength="255" required></lightning-textarea>
+    <lightning-button label="Fermer le ticket sélectionné" onclick={close} disabled={busy}></lightning-button>
+   </template>
+  </div>
+ </lightning-card>
+</template>
