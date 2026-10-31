@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ResolveIQ_Required_Fields</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(ISBLANK(ContactId),ISBLANK(TRIM(Subject)),LEN(Description)=0)</errorConditionFormula>
+    <errorMessage>Renseignez le contact, l’objet et la description.</errorMessage>
+</ValidationRule>
