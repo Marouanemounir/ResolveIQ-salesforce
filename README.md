@@ -103,8 +103,8 @@ L'accès à Agentforce et à ses services de génération dépend des fonctionna
 ### 1. Cloner et connecter son org
 
 ```powershell
-git clone https://github.com/Marouanemounir/ResolveIQ.git
-cd ResolveIQ
+git clone https://github.com/Marouanemounir/ResolveIQ-salesforce.git
+cd ResolveIQ-salesforce
 sf org login web --alias resolveiq-dev --set-default
 ```
 
